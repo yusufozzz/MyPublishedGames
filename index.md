@@ -1,5 +1,6 @@
 <p dir="auto">## 2021</p>
 <ul dir="auto">
+<li><a href="https://apps.apple.com/tr/app/frankietect/id1594193468" rel="nofollow">Frankietect</a></li>
 <li><a href="https://apps.apple.com/us/app/magnet-run/id1593210454" rel="nofollow">Magnet Run</a></li>
 <li><a href="https://apps.apple.com/us/app/tree-run/id1591442992" rel="nofollow">Tree Run</a></li>
 <li><a href="https://apps.apple.com/us/app/clone-run/id1587692224" rel="nofollow">Clone Run</a></li>
