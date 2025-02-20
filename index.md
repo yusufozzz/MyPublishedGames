@@ -214,7 +214,8 @@
       <p>If you have any inquiries or opportunities, please feel free to reach out.</p>
       <p>Email: <a href="mailto:yusufozjr@gmail.com">yusufozjr@gmail.com</a></p>
       <p>Phone: <a href="tel:+905362925089">+905362925089</a></p>
-	  <p>LinedIn: <a href="https://www.linkedin.com/in/yusuf-oz/">Yusuf Öz</a></p>
+	  <p>LinkedIn: <a href="https://www.linkedin.com/in/yusuf-oz/">Yusuf Öz</a></p>
+	  <p><a href="https://www.instagram.com/yufisjr/">Instagram</a></p>
     </div>
   </section>
 
