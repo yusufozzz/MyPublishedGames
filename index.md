@@ -260,7 +260,7 @@
       </div>
       <div class="games">
         <div class="game">
-          <div class="game-img" style="background-image: url('/images/LashSalon.png')"></div>
+          <div class="game-img" style="background-image: url('./images/LashSalon.png')"></div>
           <h3>Lash Salon</h3>
           <p>A beauty salon management simulation game</p>
           <a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank">
@@ -268,7 +268,7 @@
           </a>
         </div>
         <div class="game">
-          <div class="game-img" style="background-image: url('/images/LashSalon.png')"></div>
+          <div class="game-img" style="background-image: url('./images/LashSalon.png')"></div>
           <h3>Snake vs Block</h3>
           <p>An addictive arcade game with a unique twist</p>
           <a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank">
@@ -276,7 +276,7 @@
           </a>
         </div>
         <div class="game">
-          <div class="game-img" style="background-image: url('/images/LashSalon.png')"></div>
+          <div class="game-img" style="background-image: url('./images/LashSalon.png')"></div>
           <h3>Small Business</h3>
           <p>Build and manage your own business empire</p>
           <a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank">
