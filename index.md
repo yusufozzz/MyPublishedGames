@@ -58,7 +58,7 @@
     /* Hero Section */
     .hero {
       background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
-      height: 10vh;
+      height: 5vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -193,15 +193,15 @@
       <div class="games">
         <div class="game">
           <h3>Lash Salon</h3>
-          <p><a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank">Download on Apple App Store</a></p>
+          <p><a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank">Apple App Store</a></p>
         </div>
         <div class="game">
           <h3>Snake vs Block</h3>
-          <p><a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank">Download on Apple App Store</a></p>
+          <p><a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank">Apple App Store</a></p>
         </div>
         <div class="game">
           <h3>Small Business</h3>
-          <p><a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank">Download on Google Play Store</a></p>
+          <p><a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank">Google Play Store</a></p>
         </div>
       </div>
     </div>
@@ -214,6 +214,7 @@
       <p>If you have any inquiries or opportunities, please feel free to reach out.</p>
       <p>Email: <a href="mailto:yusufozjr@gmail.com">yusufozjr@gmail.com</a></p>
       <p>Phone: <a href="tel:+905362925089">+905362925089</a></p>
+	  <p>LinedIn: <a href="LinkedIn:https://www.linkedin.com/in/yusuf-oz/">LinkedIn</a></p>
     </div>
   </section>
 
