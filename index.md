@@ -31,10 +31,7 @@
       background-color: #1a1a1a;
       color: #fff;
       padding: 1rem 0;
-      position: fixed;
       width: 100%;
-      top: 0;
-      z-index: 1000;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
@@ -69,14 +66,13 @@
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x400') no-repeat center center/cover;
+      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: #fff;
-      margin-top: -80px;
     }
 
     .hero-content {
@@ -84,20 +80,20 @@
     }
 
     .hero h2 {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
 
     .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
 
     /* Games Section */
     .games-section {
-      padding: 5rem 0;
+      padding: 3rem 0;
       background: #fff;
     }
 
@@ -105,7 +101,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
     .game {
@@ -129,8 +125,9 @@
     .game-img {
       width: 100%;
       height: 200px;
-      background: #f0f0f0;
-      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .game p {
@@ -145,6 +142,7 @@
       border-radius: 5px;
       margin: 1rem;
       transition: background 0.3s ease;
+      text-decoration: none;
     }
 
     .game a:hover {
@@ -153,7 +151,7 @@
 
     /* Contact Section */
     .contact {
-      padding: 5rem 0;
+      padding: 3rem 0;
       background: #f8f9fa;
     }
 
@@ -192,6 +190,18 @@
       text-align: center;
     }
 
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
     @media (max-width: 768px) {
       header .container {
         flex-direction: column;
@@ -204,11 +214,11 @@
       }
 
       .hero h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
 
       .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   </style>
@@ -236,17 +246,21 @@
 
   <section id="about" class="section">
     <div class="container">
-      <h2>About Me</h2>
-      <p>With 5 years of experience in game development, I specialize in creating engaging mobile games using Unity and C#. My passion lies in crafting experiences that bring joy to players worldwide.</p>
+      <div class="section-header">
+        <h2>About Me</h2>
+      </div>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto;">With 5 years of experience in game development, I specialize in creating engaging mobile games using Unity and C#. My passion lies in crafting experiences that bring joy to players worldwide.</p>
     </div>
   </section>
 
   <section id="games" class="games-section">
     <div class="container">
-      <h2>Featured Games</h2>
+      <div class="section-header">
+        <h2>Featured Games</h2>
+      </div>
       <div class="games">
         <div class="game">
-          <img src="/api/placeholder/400/200" alt="Lash Salon" class="game-img">
+          <div class="game-img" style="background-image: url('/path/to/lash-salon-screenshot.jpg')"></div>
           <h3>Lash Salon</h3>
           <p>A beauty salon management simulation game</p>
           <a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank">
@@ -254,7 +268,7 @@
           </a>
         </div>
         <div class="game">
-          <img src="/api/placeholder/400/200" alt="Snake vs Block" class="game-img">
+          <div class="game-img" style="background-image: url('/path/to/snake-vs-block-screenshot.jpg')"></div>
           <h3>Snake vs Block</h3>
           <p>An addictive arcade game with a unique twist</p>
           <a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank">
@@ -262,7 +276,7 @@
           </a>
         </div>
         <div class="game">
-          <img src="/api/placeholder/400/200" alt="Small Business" class="game-img">
+          <div class="game-img" style="background-image: url('/path/to/small-business-screenshot.jpg')"></div>
           <h3>Small Business</h3>
           <p>Build and manage your own business empire</p>
           <a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank">
@@ -275,7 +289,9 @@
 
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Get in Touch</h2>
+      <div class="section-header">
+        <h2>Get in Touch</h2>
+      </div>
       <div class="social-links">
         <a href="mailto:yusufozjr@gmail.com" title="Email">
           <i class="fas fa-envelope"></i>
