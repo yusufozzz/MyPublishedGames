@@ -163,7 +163,7 @@
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#games">My Published Games</a></li>
+          <li><a href="#games">Games</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -189,7 +189,7 @@
   <!-- Published Games Section -->
   <section id="games" class="section games-section">
     <div class="container">
-      <h2>My Published Games</h2>
+      <h2>Games</h2>
       <div class="games">
         <div class="game">
           <h3>Lash Salon</h3>
