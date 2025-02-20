@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -59,7 +58,7 @@
     /* Hero Section */
     .hero {
       background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
-      height: 80vh;
+      height: 10vh;
       display: flex;
       align-items: center;
       justify-content: center;
