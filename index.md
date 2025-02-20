@@ -1,13 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yusuf Öz - Game Developer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-  integrity="sha512-Fo3rlrZj/k7ujTnH1O2O31HPe5Jw70k8nLRb+Y8afp+zw9SZF1Ly0v7pPQ2duhp1tT6aYp1sFf5F0UwL6rx1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     /* Global Styles */
     * {
@@ -18,7 +14,7 @@
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      background-color: #fff7f3;
+      background-color: #f4f4f4;
       color: #333;
     }
     a {
@@ -32,7 +28,7 @@
     }
     /* Header */
     header {
-      background: linear-gradient(135deg, #ff6f61, #ff9a9e);
+      background-color: #333;
       color: #fff;
       padding: 20px 0;
     }
@@ -57,17 +53,17 @@
       transition: color 0.3s ease;
     }
     nav ul li a:hover {
-      color: #ffe0dc;
+      color: #00b4d8;
     }
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, #fad0c4, #ffd1ff);
-      height: 80vh;
+      background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+      height: 5vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #333;
+      color: #fff;
       padding: 0 20px;
     }
     .hero h2 {
@@ -118,7 +114,7 @@
       font-size: 1.5rem;
     }
     .game p a {
-      background: #ff6f61;
+      background: #00b4d8;
       color: #fff;
       padding: 10px 15px;
       border-radius: 4px;
@@ -126,7 +122,7 @@
       transition: background 0.3s ease;
     }
     .game p a:hover {
-      background: #e65a50;
+      background: #0077b6;
     }
     /* Contact Section */
     .contact {
@@ -137,22 +133,8 @@
       margin-bottom: 10px;
     }
     .contact a {
-      color: #ff6f61;
+      color: #00b4d8;
       font-weight: bold;
-    }
-    .contact .icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      font-size: 1.5rem;
-      margin-top: 20px;
-    }
-    .contact .icons a {
-      color: #333;
-      transition: color 0.3s ease;
-    }
-    .contact .icons a:hover {
-      color: #ff6f61;
     }
     /* Footer */
     footer {
@@ -229,13 +211,11 @@
   <section id="contact" class="section contact">
     <div class="container">
       <h2>Contact</h2>
-      <p>If you have any inquiries or opportunities, feel free to reach out.</p>
-      <div class="icons">
-        <a href="mailto:yusufozjr@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="tel:+905362925089" title="Phone"><i class="fas fa-phone"></i></a>
-        <a href="https://www.linkedin.com/in/yusuf-oz/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/yufisjr/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
+      <p>If you have any inquiries or opportunities, please feel free to reach out.</p>
+      <p>Email: <a href="mailto:yusufozjr@gmail.com">yusufozjr@gmail.com</a></p>
+      <p>Phone: <a href="tel:+905362925089">+905362925089</a></p>
+	  <p>LinkedIn: <a href="https://www.linkedin.com/in/yusuf-oz/">Yusuf Öz</a></p>
+	  <p><a href="https://www.instagram.com/yufisjr/">Instagram</a></p>
     </div>
   </section>
 
