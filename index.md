@@ -5,7 +5,9 @@
   <title>Yusuf Öz - Game Developer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
   <style>
+    /* Türkçe Açıklama: Sayfa genel stil ayarları */
     * {
       margin: 0;
       padding: 0;
@@ -63,11 +65,11 @@
       color: #00b4d8;
     }
 
-    /* HERO KISMI */
+    /* Türkçe Açıklama: Hero kısmı - sade bir tasarım */
     .hero {
-      background-color: #fff; /* Arka plan rengini basit tuttuk */
+      background-color: #fff;
       text-align: center;
-      padding: 3rem 0;       /* Yüksekliği içeriğe göre ayarlamak için sabit height yerine padding kullandık */
+      padding: 3rem 0;
     }
 
     .hero-content {
@@ -87,7 +89,7 @@
       color: #666;
     }
 
-    /* GAMES SECTION */
+    /* Türkçe Açıklama: Öne çıkan oyunlar bölümü */
     .games-section {
       padding: 3rem 0;
       background: #fff;
@@ -104,67 +106,97 @@
       margin-bottom: 0.5rem;
     }
 
+    /* 
+      Türkçe Açıklama: 
+      .games kapsayıcısına flex-wrap ekliyoruz ki 
+      ekran daralınca oyun kartları alt satıra geçebilsin.
+    */
     .games {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
+      justify-content: center;
       margin-top: 2rem;
     }
 
+    /* 
+      Türkçe Açıklama:
+      .game her bir oyun kartı. 
+      Genişlik ve yükseklik sabit (300x125). 
+      İçeride icon, isim, içerik ve buton yanyana.
+    */
     .game {
+      width: 300px;
+      height: 125px;
       background: #ffffff;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
-      padding: 1rem;
+      display: flex;           /* Elemanları yanyana koymak için flex */
+      align-items: center;     /* Dikeyde ortalamak için */
+      justify-content: space-between; /* Yatayda boşluğu yaymak için */
+      padding: 0 10px;         /* Yatayda iç boşluk */
     }
 
     .game:hover {
       transform: translateY(-5px);
     }
 
-    .game-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .game-img {
-      width: 100px;
-      height: 100px;
+    /* 
+      Türkçe Açıklama:
+      Soldaki ikon. 100x100 yerine 80x80 kullandık ki metinlere yer kalsın.
+      background-size cover ile resim boyutuna uyarlanır.
+    */
+    .icon {
+      width: 80px;
+      height: 80px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      border-radius: 6px; /* Resmin köşelerini hafif yuvarlamak için */
+      border-radius: 6px;
+      flex-shrink: 0; /* Dar alanda ikonun sıkışmaması için */
     }
 
-    .game h3 {
-      font-size: 1.5rem;
-      margin: 0;
-      color: #333;
+    /* Türkçe Açıklama: Oyun ismi ve kısa içerik alanı */
+    .name-content {
+      display: flex;
+      flex-direction: column;
+      margin: 0 10px; /* İkon ve butonla arada boşluk */
+      flex: 1;        /* Ortadaki alanın genişlemesine izin ver */
+      overflow: hidden; /* Metin taşarsa gizleyebilir */
     }
 
-    .game p {
-      margin: 1rem 0;
-      line-height: 1.4;
+    .name-content .name {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
-    .game a {
+    .name-content .content {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.2;
+    }
+
+    /* Türkçe Açıklama: Mağaza linki butonu */
+    .store-link {
       display: inline-block;
       background: #00b4d8;
       color: #fff;
-      padding: 0.8rem 1.5rem;
+      padding: 0.6rem 1rem;
       border-radius: 5px;
       transition: background 0.3s ease;
       text-decoration: none;
+      font-size: 0.9rem;
+      flex-shrink: 0; /* Dar alanda butonun sıkışmaması için */
     }
 
-    .game a:hover {
+    .store-link:hover {
       background: #0077b6;
     }
 
-    /* CONTACT SECTION */
+    /* Türkçe Açıklama: İletişim bölümü */
     .contact {
       padding: 3rem 0;
       background: #f8f9fa;
@@ -197,7 +229,6 @@
       font-size: 1.1rem;
     }
 
-    /* FOOTER */
     footer {
       background: #1a1a1a;
       color: #fff;
@@ -223,6 +254,12 @@
       .hero p {
         font-size: 1rem;
       }
+
+      /* 
+        Türkçe Açıklama:
+        Mobilde de kartların 300px kalmasını istersen bu kısım değişmeyebilir.
+        İstersen width: 100% diyerek ekrana göre genişlemelerini sağlayabilirsin.
+      */
     }
   </style>
 </head>
@@ -264,38 +301,41 @@
         <h2>Featured Games</h2>
       </div>
       <div class="games">
+        
+        <!-- Türkçe Açıklama: Bir oyun kartı örneği -->
         <div class="game">
-          <div class="game-header">
-            <div class="game-img" style="background-image: url('Images/LashSalon.png');"></div>
-            <h3>Lash Salon</h3>
+          <div class="icon" style="background-image: url('Images/LashSalon.png');"></div>
+          <div class="name-content">
+            <div class="name">Lash Salon</div>
+            <div class="content">A beauty salon management simulation game</div>
           </div>
-          <p>A beauty salon management simulation game</p>
-          <a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank">
+          <a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank" class="store-link">
             <i class="fab fa-app-store-ios"></i> App Store
           </a>
         </div>
 
         <div class="game">
-          <div class="game-header">
-            <div class="game-img" style="background-image: url('Images/SnakeVsBlock.png');"></div>
-            <h3>Snake vs Block</h3>
+          <div class="icon" style="background-image: url('Images/SnakeVsBlock.png');"></div>
+          <div class="name-content">
+            <div class="name">Snake vs Block</div>
+            <div class="content">An addictive arcade game with a unique twist</div>
           </div>
-          <p>An addictive arcade game with a unique twist</p>
-          <a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank">
+          <a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank" class="store-link">
             <i class="fab fa-app-store-ios"></i> App Store
           </a>
         </div>
 
         <div class="game">
-          <div class="game-header">
-            <div class="game-img" style="background-image: url('Images/SmallBusiness.jpg');"></div>
-            <h3>Small Business</h3>
+          <div class="icon" style="background-image: url('Images/SmallBusiness.jpg');"></div>
+          <div class="name-content">
+            <div class="name">Small Business</div>
+            <div class="content">Build and manage your own business empire</div>
           </div>
-          <p>Build and manage your own business empire</p>
-          <a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank">
+          <a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank" class="store-link">
             <i class="fab fa-google-play"></i> Play Store
           </a>
         </div>
+
       </div>
     </div>
   </section>
