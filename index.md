@@ -63,10 +63,11 @@
       color: #00b4d8;
     }
 
+    /* HERO KISMI */
     .hero {
-      background-color: #fff;
+      background-color: #fff; /* Arka plan rengini basit tuttuk */
       text-align: center;
-      padding: 3rem 0;
+      padding: 3rem 0;       /* Yüksekliği içeriğe göre ayarlamak için sabit height yerine padding kullandık */
     }
 
     .hero-content {
@@ -86,6 +87,7 @@
       color: #666;
     }
 
+    /* GAMES SECTION */
     .games-section {
       padding: 3rem 0;
       background: #fff;
@@ -102,13 +104,11 @@
       margin-bottom: 0.5rem;
     }
 
-    /
     .games {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
     }
 
     .game {
@@ -118,7 +118,6 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
       padding: 1rem;
-      width: 300px;
     }
 
     .game:hover {
@@ -137,7 +136,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      border-radius: 6px;
+      border-radius: 6px; /* Resmin köşelerini hafif yuvarlamak için */
     }
 
     .game h3 {
@@ -165,6 +164,7 @@
       background: #0077b6;
     }
 
+    /* CONTACT SECTION */
     .contact {
       padding: 3rem 0;
       background: #f8f9fa;
@@ -197,6 +197,7 @@
       font-size: 1.1rem;
     }
 
+    /* FOOTER */
     footer {
       background: #1a1a1a;
       color: #fff;
@@ -221,12 +222,6 @@
 
       .hero p {
         font-size: 1rem;
-      }
-
-      /
-      .game {
-        width: auto;
-        margin: 0 auto;
       }
     }
   </style>
