@@ -63,35 +63,45 @@
       color: #00b4d8;
     }
 
+    /* HERO KISMI */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x400') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #fff; /* Arka plan rengini basit tuttuk */
       text-align: center;
-      color: #fff;
+      padding: 3rem 0;       /* Yüksekliği içeriğe göre ayarlamak için sabit height yerine padding kullandık */
     }
 
     .hero-content {
       max-width: 800px;
+      margin: 0 auto;
     }
 
     .hero h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      color: #333;
     }
 
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 1rem;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      color: #666;
     }
 
+    /* GAMES SECTION */
     .games-section {
       padding: 3rem 0;
       background: #fff;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
     }
 
     .games {
@@ -114,20 +124,30 @@
       transform: translateY(-5px);
     }
 
+    .game-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .game-img {
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 6px; /* Resmin köşelerini hafif yuvarlamak için */
+    }
+
     .game h3 {
       font-size: 1.5rem;
       margin: 0;
       color: #333;
     }
 
-    .game-img {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
     .game p {
       margin: 1rem 0;
+      line-height: 1.4;
     }
 
     .game a {
@@ -144,6 +164,7 @@
       background: #0077b6;
     }
 
+    /* CONTACT SECTION */
     .contact {
       padding: 3rem 0;
       background: #f8f9fa;
@@ -176,22 +197,12 @@
       font-size: 1.1rem;
     }
 
+    /* FOOTER */
     footer {
       background: #1a1a1a;
       color: #fff;
       padding: 1.5rem 0;
       text-align: center;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .section-header h2 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 0.5rem;
     }
 
     @media (max-width: 768px) {
@@ -254,8 +265,8 @@
       </div>
       <div class="games">
         <div class="game">
-          <div class="game-header" style="display: flex; align-items: center; gap: 1rem;">
-            <div class="game-img" style="width: 100px; height: 100px; background-image: url('Images/LashSalon.png');"></div>
+          <div class="game-header">
+            <div class="game-img" style="background-image: url('Images/LashSalon.png');"></div>
             <h3>Lash Salon</h3>
           </div>
           <p>A beauty salon management simulation game</p>
@@ -265,8 +276,8 @@
         </div>
 
         <div class="game">
-          <div class="game-header" style="display: flex; align-items: center; gap: 1rem;">
-            <div class="game-img" style="width: 100px; height: 100px; background-image: url('Images/SnakeVsBlock.png');"></div>
+          <div class="game-header">
+            <div class="game-img" style="background-image: url('Images/SnakeVsBlock.png');"></div>
             <h3>Snake vs Block</h3>
           </div>
           <p>An addictive arcade game with a unique twist</p>
@@ -276,8 +287,8 @@
         </div>
 
         <div class="game">
-          <div class="game-header" style="display: flex; align-items: center; gap: 1rem;">
-            <div class="game-img" style="width: 100px; height: 100px; background-image: url('Images/SmallBusiness.png');"></div>
+          <div class="game-header">
+            <div class="game-img" style="background-image: url('Images/SmallBusiness.png');"></div>
             <h3>Small Business</h3>
           </div>
           <p>Build and manage your own business empire</p>
