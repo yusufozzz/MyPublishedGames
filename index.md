@@ -119,14 +119,8 @@
       margin-top: 2rem;
     }
 
-    /* 
-      Türkçe Açıklama:
-      .game her bir oyun kartı. 
-      Genişlik ve yükseklik sabit (300x125). 
-      İçeride icon, isim, içerik ve buton yanyana.
-    */
     .game {
-      width: 300px;
+      width: 500px;
       height: 125px;
       background: #ffffff;
       border-radius: 10px;
@@ -143,11 +137,6 @@
       transform: translateY(-5px);
     }
 
-    /* 
-      Türkçe Açıklama:
-      Soldaki ikon. 100x100 yerine 80x80 kullandık ki metinlere yer kalsın.
-      background-size cover ile resim boyutuna uyarlanır.
-    */
     .icon {
       width: 80px;
       height: 80px;
@@ -196,7 +185,6 @@
       background: #0077b6;
     }
 
-    /* Türkçe Açıklama: İletişim bölümü */
     .contact {
       padding: 3rem 0;
       background: #f8f9fa;
@@ -301,8 +289,6 @@
         <h2>Featured Games</h2>
       </div>
       <div class="games">
-        
-        <!-- Türkçe Açıklama: Bir oyun kartı örneği -->
         <div class="game">
           <div class="icon" style="background-image: url('Images/LashSalon.png');"></div>
           <div class="name-content">
