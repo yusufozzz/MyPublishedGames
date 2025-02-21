@@ -1,344 +1,189 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yusuf Öz - Game Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { GlobeAltIcon, SparklesIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
 
-  <style>
+const Portfolio = () => {
+  const [scrollY, setScrollY] = useState(0);
+  
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const games = [
     {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      title: "Lash Salon",
+      description: "A beauty salon management simulation game",
+      icon: "/Images/LashSalon.png",
+      link: "https://apps.apple.com/us/app/lash-salon/id1602974261",
+      store: "App Store",
+      downloads: "100K+",
+      rating: 4.8
+    },
+    {
+      title: "Snake vs Block",
+      description: "An addictive arcade game with a unique twist",
+      icon: "/Images/SnakeVsBlock.png",
+      link: "https://apps.apple.com/us/app/snake-vs-block/id1233739175",
+      store: "App Store",
+      downloads: "500K+",
+      rating: 4.6
+    },
+    {
+      title: "Small Business",
+      description: "Build and manage your own business empire",
+      icon: "/Images/SmallBusiness.jpg",
+      link: "https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness",
+      store: "Play Store",
+      downloads: "250K+",
+      rating: 4.7
     }
-    
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+  ];
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    header {
-      background-color: #1a1a1a;
-      color: #fff;
-      padding: 1rem 0;
-      width: 100%;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      font-size: 1.1rem;
-    }
-
-    nav ul li a:hover {
-      color: #00b4d8;
-    }
-
-    .hero {
-      background-color: #fff;
-      text-align: center;
-      padding: 3rem 0;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #333;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: #666;
-    }
-
-    .games-section {
-      padding: 3rem 0;
-      background: #fff;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .section-header h2 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 0.5rem;
-    }
-
-    .games {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-
-    .game {
-      width: 500px;
-      height: 125px;
-      background: #ffffff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 10px;
-    }
-
-    .game:hover {
-      transform: translateY(-5px);
-    }
-
-    .icon {
-      width: 80px;
-      height: 80px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 6px;
-      flex-shrink: 0;
-    }
-
-    .name-content {
-      display: flex;
-      flex-direction: column;
-      margin: 0 10px;
-      flex: 1;
-      overflow: hidden;
-    }
-
-    .name-content .name {
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    .name-content .content {
-      font-size: 0.9rem;
-      color: #555;
-      line-height: 1.2;
-    }
-
-    .store-link {
-      display: inline-block;
-      background: #00b4d8;
-      color: #fff;
-      padding: 0.6rem 1rem;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-      text-decoration: none;
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-
-    .store-link:hover {
-      background: #0077b6;
-    }
-
-    .contact {
-      padding: 3rem 0;
-      background: #f8f9fa;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .social-links a {
-      color: #333;
-      font-size: 2rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: #00b4d8;
-    }
-
-    .contact-info {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .contact-info p {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 1.5rem 0;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-        padding: 1rem;
-      }
-
-      nav ul {
-        margin-top: 1rem;
-        gap: 1rem;
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Yusuf Öz</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#games">Games</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Game Developer</h2>
-      <p>Crafting Immersive Gaming Experiences</p>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>About Me</h2>
-      </div>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto;">
-        With 5 years of experience in game development, I specialize in creating engaging mobile games using Unity and C#. My passion lies in crafting experiences that bring joy to players worldwide.
-      </p>
-    </div>
-  </section>
-
-  <section id="games" class="games-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Featured Games</h2>
-      </div>
-      <div class="games">
-        <div class="game">
-          <div class="icon" style="background-image: url('Images/LashSalon.png');"></div>
-          <div class="name-content">
-            <div class="name">Lash Salon</div>
-            <div class="content">A beauty salon management simulation game</div>
-          </div>
-          <a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank" class="store-link">
-            <i class="fab fa-app-store-ios"></i> App Store
-          </a>
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      {/* Hero Section */}
+      <header className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: 'url("/api/placeholder/1920/1080")',
+            transform: `translateY(${scrollY * 0.5}px)`,
+          }}
+        />
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+              Yusuf Öz
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">Game Developer & Creative Designer</p>
+            <div className="flex justify-center gap-4">
+              <a href="#games" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition duration-300">
+                View Projects
+              </a>
+              <a href="#contact" className="border border-white hover:bg-white hover:text-black px-8 py-3 rounded-full transition duration-300">
+                Contact Me
+              </a>
+            </div>
+          </motion.div>
         </div>
+      </header>
 
-        <div class="game">
-          <div class="icon" style="background-image: url('Images/SnakeVsBlock.png');"></div>
-          <div class="name-content">
-            <div class="name">Snake vs Block</div>
-            <div class="content">An addictive arcade game with a unique twist</div>
+      {/* Stats Section */}
+      <section className="py-20 bg-gray-800/50">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: GlobeAltIcon, stat: "5+ Years", text: "Experience" },
+              { icon: SparklesIcon, stat: "850K+", text: "Total Downloads" },
+              { icon: DevicePhoneMobileIcon, stat: "15+", text: "Published Games" }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="text-center p-6 rounded-2xl bg-gray-700/30 backdrop-blur-lg"
+              >
+                <item.icon className="w-12 h-12 mx-auto mb-4 text-blue-400" />
+                <h3 className="text-3xl font-bold mb-2">{item.stat}</h3>
+                <p className="text-gray-400">{item.text}</p>
+              </motion.div>
+            ))}
           </div>
-          <a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank" class="store-link">
-            <i class="fab fa-app-store-ios"></i> App Store
-          </a>
         </div>
+      </section>
 
-        <div class="game">
-          <div class="icon" style="background-image: url('Images/SmallBusiness.jpg');"></div>
-          <div class="name-content">
-            <div class="name">Small Business</div>
-            <div class="content">Build and manage your own business empire</div>
+      {/* Games Section */}
+      <section id="games" className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">Featured Games</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {games.map((game, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="bg-gray-800/50 rounded-2xl overflow-hidden backdrop-blur-lg"
+              >
+                <div className="aspect-square relative">
+                  <img
+                    src={game.icon || "/api/placeholder/400/400"}
+                    alt={game.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">{game.title}</h3>
+                      <p className="text-gray-300 mb-4">{game.description}</p>
+                      <div className="flex items-center gap-4">
+                        <span className="text-yellow-400">★ {game.rating}</span>
+                        <span className="text-gray-400">{game.downloads} downloads</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <a
+                    href={game.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl transition duration-300"
+                  >
+                    Download on {game.store}
+                  </a>
+                </div>
+              </motion.div>
+            ))}
           </div>
-          <a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank" class="store-link">
-            <i class="fab fa-google-play"></i> Play Store
-          </a>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gray-800/50">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-8">Let's Create Something Amazing</h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            I'm always open to new opportunities and exciting collaborations. Let's bring your game idea to life!
+          </p>
+          <div className="flex justify-center gap-6">
+            {[
+              { icon: "fas fa-envelope", link: "mailto:yusufozjr@gmail.com" },
+              { icon: "fab fa-linkedin", link: "https://www.linkedin.com/in/yusuf-oz/" },
+              { icon: "fab fa-instagram", link: "https://www.instagram.com/yufisjr/" },
+              { icon: "fas fa-phone", link: "tel:+905362925089" }
+            ].map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-600 transition duration-300"
+              >
+                <i className={`${social.icon} text-2xl`}></i>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
 
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2>Get in Touch</h2>
-      </div>
-      <div class="social-links">
-        <a href="mailto:yusufozjr@gmail.com" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/yusuf-oz/" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/yufisjr/" target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="tel:+905362925089" title="Phone">
-          <i class="fas fa-phone"></i>
-        </a>
-      </div>
-      <div class="contact-info">
-        <p>I'm always open to new opportunities and collaborations</p>
-      </div>
+      <footer className="py-8 text-center text-gray-400">
+        <div className="container mx-auto px-6">
+          <p>&copy; 2025 Yusuf Öz. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
-  </section>
+  );
+};
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Yusuf Öz. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+export default Portfolio;
