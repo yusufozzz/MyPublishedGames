@@ -260,7 +260,7 @@
       </div>
       <div class="games">
         <div class="game">
-          <div class="game-img" style="background-image: url('images/LashSalon.png')"></div>
+          <div class="game-img" style="background-image: url('Images/LashSalon.png')"></div>
           <h3>Lash Salon</h3>
           <p>A beauty salon management simulation game</p>
           <a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank">
