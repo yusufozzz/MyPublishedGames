@@ -7,8 +7,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* Türkçe Açıklama: Sayfa genel stil ayarları */
-    * {
+    {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -65,7 +64,6 @@
       color: #00b4d8;
     }
 
-    /* Türkçe Açıklama: Hero kısmı - sade bir tasarım */
     .hero {
       background-color: #fff;
       text-align: center;
@@ -89,7 +87,6 @@
       color: #666;
     }
 
-    /* Türkçe Açıklama: Öne çıkan oyunlar bölümü */
     .games-section {
       padding: 3rem 0;
       background: #fff;
@@ -106,11 +103,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* 
-      Türkçe Açıklama: 
-      .games kapsayıcısına flex-wrap ekliyoruz ki 
-      ekran daralınca oyun kartları alt satıra geçebilsin.
-    */
     .games {
       display: flex;
       flex-wrap: wrap;
@@ -127,10 +119,10 @@
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
-      display: flex;           /* Elemanları yanyana koymak için flex */
-      align-items: center;     /* Dikeyde ortalamak için */
-      justify-content: space-between; /* Yatayda boşluğu yaymak için */
-      padding: 0 10px;         /* Yatayda iç boşluk */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
     }
 
     .game:hover {
@@ -144,16 +136,15 @@
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 6px;
-      flex-shrink: 0; /* Dar alanda ikonun sıkışmaması için */
+      flex-shrink: 0;
     }
 
-    /* Türkçe Açıklama: Oyun ismi ve kısa içerik alanı */
     .name-content {
       display: flex;
       flex-direction: column;
-      margin: 0 10px; /* İkon ve butonla arada boşluk */
-      flex: 1;        /* Ortadaki alanın genişlemesine izin ver */
-      overflow: hidden; /* Metin taşarsa gizleyebilir */
+      margin: 0 10px;
+      flex: 1;
+      overflow: hidden;
     }
 
     .name-content .name {
@@ -168,7 +159,6 @@
       line-height: 1.2;
     }
 
-    /* Türkçe Açıklama: Mağaza linki butonu */
     .store-link {
       display: inline-block;
       background: #00b4d8;
@@ -178,7 +168,7 @@
       transition: background 0.3s ease;
       text-decoration: none;
       font-size: 0.9rem;
-      flex-shrink: 0; /* Dar alanda butonun sıkışmaması için */
+      flex-shrink: 0;
     }
 
     .store-link:hover {
@@ -242,12 +232,6 @@
       .hero p {
         font-size: 1rem;
       }
-
-      /* 
-        Türkçe Açıklama:
-        Mobilde de kartların 300px kalmasını istersen bu kısım değişmeyebilir.
-        İstersen width: 100% diyerek ekrana göre genişlemelerini sağlayabilirsin.
-      */
     }
   </style>
 </head>
