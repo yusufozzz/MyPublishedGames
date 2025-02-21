@@ -288,7 +288,7 @@
 
         <div class="game">
           <div class="game-header">
-            <div class="game-img" style="background-image: url('Images/SmallBusiness.png');"></div>
+            <div class="game-img" style="background-image: url('Images/SmallBusiness.jpg');"></div>
             <h3>Small Business</h3>
           </div>
           <p>Build and manage your own business empire</p>
