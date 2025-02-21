@@ -269,7 +269,7 @@
           <div class="game-img"
                style="width: 512px; 
                       height: 512px; 
-                      background-image: url('images/LashSalon.png'); 
+                      background-image: url('Images/LashSalon.png'); 
                       background-size: cover; 
                       background-position: center; 
                       background-repeat: no-repeat;">
