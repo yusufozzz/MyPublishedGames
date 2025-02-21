@@ -26,7 +26,6 @@
       padding: 0 15px;
     }
 
-    /* Header Styles */
     header {
       background-color: #1a1a1a;
       color: #fff;
@@ -64,7 +63,6 @@
       color: #00b4d8;
     }
 
-    /* Hero Section */
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x400') no-repeat center center/cover;
       height: 300px;
@@ -91,7 +89,6 @@
       text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
 
-    /* Games Section */
     .games-section {
       padding: 3rem 0;
       background: #fff;
@@ -110,6 +107,7 @@
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
+      padding: 1rem;
     }
 
     .game:hover {
@@ -118,14 +116,10 @@
 
     .game h3 {
       font-size: 1.5rem;
-      margin: 1rem;
+      margin: 0;
       color: #333;
     }
 
-    /* 
-      Burada .game-img default olarak %100 genişlik ve 200px yükseklik veriyordu.
-      LashSalon için özel bir stil ekleyeceğiz (inline style).
-    */
     .game-img {
       background-size: cover;
       background-position: center;
@@ -133,7 +127,7 @@
     }
 
     .game p {
-      padding: 1rem;
+      margin: 1rem 0;
     }
 
     .game a {
@@ -142,7 +136,6 @@
       color: #fff;
       padding: 0.8rem 1.5rem;
       border-radius: 5px;
-      margin: 1rem;
       transition: background 0.3s ease;
       text-decoration: none;
     }
@@ -151,7 +144,6 @@
       background: #0077b6;
     }
 
-    /* Contact Section */
     .contact {
       padding: 3rem 0;
       background: #f8f9fa;
@@ -184,7 +176,6 @@
       font-size: 1.1rem;
     }
 
-    /* Footer */
     footer {
       background: #1a1a1a;
       color: #fff;
@@ -192,7 +183,6 @@
       text-align: center;
     }
 
-    /* Section Headers */
     .section-header {
       text-align: center;
       margin-bottom: 2rem;
@@ -263,38 +253,33 @@
         <h2>Featured Games</h2>
       </div>
       <div class="games">
-        <!-- Lash Salon -->
         <div class="game">
-          <!-- 512x512 boyut için inline style kullandık -->
-          <div class="game-img"
-               style="width: 512px; 
-                      height: 512px; 
-                      background-image: url('Images/LashSalon.png'); 
-                      background-size: cover; 
-                      background-position: center; 
-                      background-repeat: no-repeat;">
+          <div class="game-header" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="game-img" style="width: 100px; height: 100px; background-image: url('Images/LashSalon.png');"></div>
+            <h3>Lash Salon</h3>
           </div>
-          <h3>Lash Salon</h3>
           <p>A beauty salon management simulation game</p>
           <a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank">
             <i class="fab fa-app-store-ios"></i> App Store
           </a>
         </div>
 
-        <!-- Snake vs Block (örnek olarak eskisi gibi bıraktım) -->
         <div class="game">
-          <div class="game-img" style="width: 100%; height: 200px; background-image: url('images/LashSalon.png');"></div>
-          <h3>Snake vs Block</h3>
+          <div class="game-header" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="game-img" style="width: 100px; height: 100px; background-image: url('Images/SnakeVsBlock.png');"></div>
+            <h3>Snake vs Block</h3>
+          </div>
           <p>An addictive arcade game with a unique twist</p>
           <a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank">
             <i class="fab fa-app-store-ios"></i> App Store
           </a>
         </div>
 
-        <!-- Small Business (örnek olarak eskisi gibi bıraktım) -->
         <div class="game">
-          <div class="game-img" style="width: 100%; height: 200px; background-image: url('images/LashSalon.png');"></div>
-          <h3>Small Business</h3>
+          <div class="game-header" style="display: flex; align-items: center; gap: 1rem;">
+            <div class="game-img" style="width: 100px; height: 100px; background-image: url('Images/SmallBusiness.png');"></div>
+            <h3>Small Business</h3>
+          </div>
           <p>Build and manage your own business empire</p>
           <a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank">
             <i class="fab fa-google-play"></i> Play Store
