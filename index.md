@@ -122,9 +122,11 @@
       color: #333;
     }
 
+    /* 
+      Burada .game-img default olarak %100 genişlik ve 200px yükseklik veriyordu.
+      LashSalon için özel bir stil ekleyeceğiz (inline style).
+    */
     .game-img {
-      width: 100%;
-      height: 200px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -249,7 +251,9 @@
       <div class="section-header">
         <h2>About Me</h2>
       </div>
-      <p style="text-align: center; max-width: 800px; margin: 0 auto;">With 5 years of experience in game development, I specialize in creating engaging mobile games using Unity and C#. My passion lies in crafting experiences that bring joy to players worldwide.</p>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+        With 5 years of experience in game development, I specialize in creating engaging mobile games using Unity and C#. My passion lies in crafting experiences that bring joy to players worldwide.
+      </p>
     </div>
   </section>
 
@@ -259,24 +263,37 @@
         <h2>Featured Games</h2>
       </div>
       <div class="games">
+        <!-- Lash Salon -->
         <div class="game">
-          <div class="game-img" style="background-image: url('Images/LashSalon.png')"></div>
+          <!-- 512x512 boyut için inline style kullandık -->
+          <div class="game-img"
+               style="width: 512px; 
+                      height: 512px; 
+                      background-image: url('images/LashSalon.png'); 
+                      background-size: cover; 
+                      background-position: center; 
+                      background-repeat: no-repeat;">
+          </div>
           <h3>Lash Salon</h3>
           <p>A beauty salon management simulation game</p>
           <a href="https://apps.apple.com/us/app/lash-salon/id1602974261" target="_blank">
             <i class="fab fa-app-store-ios"></i> App Store
           </a>
         </div>
+
+        <!-- Snake vs Block (örnek olarak eskisi gibi bıraktım) -->
         <div class="game">
-          <div class="game-img" style="background-image: url('images/LashSalon.png')"></div>
+          <div class="game-img" style="width: 100%; height: 200px; background-image: url('images/LashSalon.png');"></div>
           <h3>Snake vs Block</h3>
           <p>An addictive arcade game with a unique twist</p>
           <a href="https://apps.apple.com/us/app/snake-vs-block/id1233739175" target="_blank">
             <i class="fab fa-app-store-ios"></i> App Store
           </a>
         </div>
+
+        <!-- Small Business (örnek olarak eskisi gibi bıraktım) -->
         <div class="game">
-          <div class="game-img" style="background-image: url('images/LashSalon.png')"></div>
+          <div class="game-img" style="width: 100%; height: 200px; background-image: url('images/LashSalon.png');"></div>
           <h3>Small Business</h3>
           <p>Build and manage your own business empire</p>
           <a href="https://play.google.com/store/apps/details?id=com.HalfBite.SmallBusiness" target="_blank">
